@@ -1,0 +1,11 @@
+{
+  "name": "anti-pw",
+  "private": true,
+  "scripts": {
+    "test": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "dotenv": "^16.4.7"
+  }
+}
