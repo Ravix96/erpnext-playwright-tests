@@ -19,3 +19,4 @@ test('logs in to ERPNext and opens the desk', async ({ page }) => {
   await expect(page).toHaveURL(/\/app\/home(?:[/?#]|$)/);
   await expect(page.getByRole('heading', { name: 'Home' })).toBeVisible();
 });
+// Testscript login Redsun.
