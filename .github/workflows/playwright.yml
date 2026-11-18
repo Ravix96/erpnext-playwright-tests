@@ -18,10 +18,10 @@ jobs:
     - name: Set up Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: 'lts/*' # Use the LTS version or your specific version
+        node-version: 'lts/*'
         
     - name: Install dependencies
-      run: npm ci # Or 'npm install' if you don't have a package-lock.json, but 'npm ci' is preferred for CI
+      run: npm ci
       
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
@@ -29,7 +29,6 @@ jobs:
     - name: Run Playwright tests
       run: npx playwright test
       env:
-        # Pass your repository secrets as environment variables to the test script
         ERPNEXT_URL: ${{ secrets.ERPNEXT_URL }}
         ERPNEXT_USER: ${{ secrets.ERPNEXT_USER }}
         ERPNEXT_PASSWORD: ${{ secrets.ERPNEXT_PASSWORD }}
